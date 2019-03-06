@@ -9,14 +9,24 @@
   <h1>What to create next</h1>
   <div class="inputSection">
     <div class="inputs">
-      <input placeholder="yes"></input>
+      <input placeholder="add"></input>
     </div>
     <button class="buttonOne">Try it out</button>
   </div>
-  <button class="butttonTwo">next</button>
+  <div class="resultSection"></div>
+  <button class="butttonTwo">Next</button>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
   $(function() {
     $('.resultSection').hide()
+
+    var buttonOne = function() {
+      $('.inputs').append('<input></input>')
+    }
+
+    $('.buttonOne').click(buttonOne)
+  })
+  </script>
 </body>
 </html>
