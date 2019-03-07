@@ -39,7 +39,15 @@ input {
   color: pink
 }
 
-.butttonTwo {
+.buttonTwo {
   margin-top: 30px;
   color: pink
+}
+
+.resultSection {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px
 }

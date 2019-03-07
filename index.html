@@ -14,19 +14,31 @@
     <button class="buttonOne">Try it out</button>
   </div>
   <div class="resultSection"></div>
-  <button class="butttonTwo">Next</button>
+  <button class="buttonTwo">Next</button>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-  $(function() {
-    $('.resultSection').hide()
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
 
-    var buttonOne = function() {
-      $('.inputs').append('<input></input>')
-    }
+        var buttonOne= function() {
+          $('.inputs').append('<input></input>')
+        }
+        $('.buttonOne').click(buttonOne)
 
-    $('.buttonOne').click(buttonOne)
-  })
-  </script>
-</body>
+        var options = []
+        var buttonTwo = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+          var winner = options[Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+        $('.buttonTwo').click(buttonTwo)
+      })
+    </script>
+  </body>
 </html>
